@@ -1,29 +1,41 @@
 // https://github.com/jubayerweb/problem-solving-assignment
 
-// kilometerToMeter
+// kilometerToMeter 
 
 function kilometerToMeter(n) {
-  return n * 1000;
+  if (n <= 0) {
+    return "Distance can not be negative!";
+  }
+  else {
+    return n * 1000;
+  }
 }
 
-// budgetCalculator
+// budgetCalculator 
 
 function budgetCalculator(watch, phone, laptop) {
-  return (watch * 50) + (phone * 100) + (laptop * 500);
+  if (watch <= 0 || phone <= 0 || laptop <= 0) {
+    return 'Invalid Input!';
+  }
+  else {
+    return (watch * 50) + (phone * 100) + (laptop * 500);
+  }
 }
 
-// hotel cost
+// hotelCost 
 
 function hotelCost(day) {
   var rent = 0;
   if (day <= 10) {
     rent = day * 100;
-  } else if (day <= 20) {
+  }
+  else if (day <= 20) {
     var firstTimeCost = 10 * 100;
     var extraDays = day - 10;
     var midTimeCost = extraDays * 80;
     rent = firstTimeCost + midTimeCost;
-  } else {
+  }
+  else {
     firstTimeCost = 10 * 100;
     midTimeCost = 10 * 80;
     extraDays = day - 20;
@@ -33,7 +45,7 @@ function hotelCost(day) {
   return rent;
 }
 
-// megaFriend
+// megaFriend 
 
 function megaFriend(names) {
   var longText = names[0];
