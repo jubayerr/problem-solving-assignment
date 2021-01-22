@@ -1,6 +1,6 @@
 // https://github.com/jubayerweb/problem-solving-assignment
 
-// kilometerToMeter 
+// kilometerToMeter
 
 function kilometerToMeter(n) {
   if (n <= 0) {
@@ -15,7 +15,7 @@ function kilometerToMeter(n) {
 
 function budgetCalculator(watch, phone, laptop) {
   if (watch <= 0 || phone <= 0 || laptop <= 0) {
-    return 'Invalid Input!';
+    return 'Invalid input!';
   }
   else {
     return (watch * 50) + (phone * 100) + (laptop * 500);
@@ -48,11 +48,16 @@ function hotelCost(day) {
 // megaFriend 
 
 function megaFriend(names) {
-  var longText = names[0];
-  for (i = 0; i < names.length; i++) {
-    if (names[i].length > longText.length) {
-      longText = names[i];
-    }
+  if (names == '') {
+    return "Invalid input!"
   }
-  return longText;
+  else {
+    var longText = names[0];
+    for (i = 0; i < names.length; i++) {
+      if (names[i].length > longText.length) {
+        longText = names[i];
+      }
+    }
+    return longText;
+  }
 }
