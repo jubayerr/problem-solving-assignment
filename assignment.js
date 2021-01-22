@@ -1,5 +1,3 @@
-// https://github.com/jubayerweb/problem-solving-assignment
-
 // kilometerToMeter
 
 function kilometerToMeter(n) {
